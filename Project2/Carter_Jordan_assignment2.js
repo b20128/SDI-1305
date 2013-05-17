@@ -8,7 +8,8 @@
 var hero = "Jimi";
 var CoastIsClear = "no one is looking";  
 var sneaking =3;
-var rightCombination = [45,17,28,68];
+var CarType = ["firetruck", "train", "jet", "helicopter"];
+var PrisonLevels = -6
 
 //Process procedure
 
@@ -30,26 +31,39 @@ var movingInTheHall = function( noiseLevel, anyoneLooking){
 }
 
 //number Function w/ While loop
-	var PrisonLevels = -6
+	
 	
 	while(PrisonLevels < 0){	
 		PrisonLevels++;
 		console.log(PrisonLevels + " Floors to Go");
 		 
-		};
+};
 		
+//string function
+
+var secretPhrase = function (firstPart, secondPart){
+	if (firstPart + secondPart === "i'm outta here!")
+	console.log("now to choose a car")
+	else console.log("halt who goes there")		
+};
+
+
 //Array Function w/ for-loop
 
-var startingNumbers = [15,0,15,45]
+var getawayCar = ["red", "green", "blue", "black"]
+var carLength = getawayCar.length		
+	
+	for (var i=0; i < carLength; i++) {
+		var WayToEscape = getawayCar[2] + " " + CarType[2]; 
 		
-for (i=0; i<5; i++) {};
+}
+		 
 
 
 //Main code - inputs
 OpeningCellDoor (CoastIsClear);
-
-movingInTheHall (sneaking , CoastIsClear);
-
-
 console.log( PrisonLevels + " floors to go, almost home!")
+movingInTheHall (sneaking , CoastIsClear);
+secretPhrase("i'm outta ", "here!")
+console.log(hero + " is taking the " + WayToEscape + " to escape" )
 
