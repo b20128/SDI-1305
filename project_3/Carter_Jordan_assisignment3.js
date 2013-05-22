@@ -4,30 +4,33 @@
 //5/21/13
  
 var storyHero = "Jimi the giant"
-var lastSeenIn =
+var lastSpottedIn = " a toyota camry"
 
 //created 1st object
 var MainCharacter = {
     "name" : storyHero,
     "description" : [
-        "4 foot even ",
-        " wearing an orange jumpsuit ",
-        "armed and extreamly dangerous"
+        "Height": 3.5,
+        " wearing": "Orange Jumpsuit",
+        "armed": true
     ],
-    "apb": function () {
-        var allPoints = this.name + this.description + "headed east on highawasee";
-        
+    var apb: function () {
+        var allPoints = this.name + this.description + this.armed;
         return allPoints;
     },
-    "escaping" : function(currentEscapingIn){
-        
-        
+    var Spotted: function(currentEscapingIn){
+    	var BreakingNews =("suspect seen in " + lastSPottedIn)
+    	return BreakingNews
+    	
     }
 
-    
-    
+    // i cant get either of these methods to work what am i missing?
+    // i'm trying to incorporate a loop some where in all this,
+    // but i'm drawing a complete blank. How could i make use of it?
+    // also i wanted to have like a special order for the police that pops up if 
+    // the hero is armed, in the console, where should i look for that in the flowchart?
 }
-
+//main code 
 
 console.log(allPoints);
 
