@@ -28,7 +28,7 @@ var MainCharacter = {
     // i'm trying to incorporate a loop some where in all this,
     // but i'm drawing a complete blank. How could i make use of it?
     // also i wanted to have like a special order for the police that pops up if 
-    // the hero is armed, in the console, where should i look for that in the flowchart?
+    // the hero is armed, in the console, how should i do that and what would that be in the flow chart?
 }
 //main code 
 
