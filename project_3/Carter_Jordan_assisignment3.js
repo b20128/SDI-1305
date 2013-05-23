@@ -19,6 +19,22 @@ var MainCharacter = {
 	"wearing ": "Orange Jumpsuit",
 	"armed ": true
     },
+<<<<<<< HEAD
+=======
+    var Spotted: function(currentEscapingIn){
+    	var BreakingNews =("suspect seen in " + lastSPottedIn)
+    	return BreakingNews
+    	
+    }
+
+    // i cant get either of these methods to work what am i missing?
+    // i'm trying to incorporate a loop some where in all this,
+    // but i'm drawing a complete blank. How could i make use of it?
+    // also i wanted to have like a special order for the police that pops up if 
+    // the hero is armed, in the console, how should i do that and what would that be in the flow chart?
+}
+//main code 
+>>>>>>> c60b2d938e77c48d3cca48137ba8ff16595610b9
 
     //My methods
     "APBs": function(daysSinceEscape){
