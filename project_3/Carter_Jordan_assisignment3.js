@@ -12,41 +12,46 @@ var armed = true
 //created 1st object
 var Escapee = {
     "name": storyHero,
-    "description": [
+    "description": [     
 	" height: 3.5",
 	" wearing an orange jumpsuit",
 	" Armed and Dangerous"
 	],
     "disappearingActs": function(){
 	var EscapeList =["change clothes", "get money", "getout of dodge!"]
+	for(i=0;i<EscapeList.length;i=i+1) {
+	   console.log("i need to " + EscapeList[i]) 
+	}
 	
     }
 };
-    //methods
+//2nd object, 2 properties, number and string 2     
 var Police={
+    "mainTask": ("bring in " + storyHero),
+    "OfficersOnDuty": 125,
     "APBs": function (daysSinceEscape){
 	
 	if (daysSinceEscape > 3){
-	    var beOntheLookout = this.name + this.description;}
+	    var beOntheLookout = Escapee.name + Escapee.description;}
 	    else {var PanicAtTheJail = storyHero + " has escaped!!"};
 	    console.log(beOntheLookout||PanicAtTheJail);
  	},
     
     "UseOfForce": function(){
 	if(true){
-	    var CurrentOrders = "Shoot to kill"
-	}
+	    var CurrentOrders = "Shoot to kill"}
 	else{ 
-	   var CurrentOrders = "Take him in alive"    
-	};
-	return CurrentOrders;
+	   var CurrentOrders = "Take him in alive"};
+	    return CurrentOrders;
     }
 };
     
 //main code
-var UseOfForceOrder = Escapee.UseOfForce(armed);
-Escapee.APBs(7);
+console.log(Police.mainTask);
+var UseOfForceOrder = Police.UseOfForce(armed);
+Police.APBs(7);
 console.log(UseOfForceOrder);
+Escapee.disappearingActs(true)
 
 
 
