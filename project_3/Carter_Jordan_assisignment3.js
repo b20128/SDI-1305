@@ -10,17 +10,20 @@ var lastSpottedIn = " a toyota camry"
 var armed = true 
 
 //created 1st object
-var MainCharacter = {
+var Escapee = {
     "name": storyHero,
     "description": [
 	" height: 3.5",
 	" wearing an orange jumpsuit",
 	" Armed and Dangerous"
 	],
-    
- 
-
-    
+    "disappearingActs": function(){
+	var EscapeList =["change clothes", "get money", "getout of dodge!"]
+	
+    }
+};
+    //methods
+var Police={
     "APBs": function (daysSinceEscape){
 	
 	if (daysSinceEscape > 3){
@@ -29,7 +32,7 @@ var MainCharacter = {
 	    console.log(beOntheLookout||PanicAtTheJail);
  	},
     
-    "UseOfForce": function(armed){
+    "UseOfForce": function(){
 	if(true){
 	    var CurrentOrders = "Shoot to kill"
 	}
@@ -40,19 +43,12 @@ var MainCharacter = {
     }
 };
     
-
-var UseOfForceOrder = MainCharacter.UseOfForce(armed)
-MainCharacter.APBs(7);
-console.log(UseOfForceOrder)
-
-
+//main code
+var UseOfForceOrder = Escapee.UseOfForce(armed);
+Escapee.APBs(7);
+console.log(UseOfForceOrder);
 
 
-//I'm trying to create a method called APBs that runs a console log
-//that either tells the police what to look for or alerts the public 
-//I'd like to run the console at the end, i cant get it working either way
-//should i be running the functions/methods? i felt like i was blending the different
-//data types together and after you last email, thats looking more and more
-//probable.
+
 
 //thanks for the help!
