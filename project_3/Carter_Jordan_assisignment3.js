@@ -7,7 +7,8 @@
 //variables
 var storyHero = "Jimi the giant"
 var lastSpottedIn = " a toyota camry"
-var armed = true 
+var armed = true
+var DaysSinceBreakOut = 2
 
 //created 1st object
 var Escapee = {
@@ -32,18 +33,23 @@ var Police={
     "APBs": function (daysSinceEscape){
 	
 	if (daysSinceEscape > 3){
-	    var beOntheLookout = Escapee.name + Escapee.description;}
+	    var beOntheLookout = Escapee.name + Escapee.description + " last spotted in " + lastSpottedIn;}
 	    else {var PanicAtTheJail = storyHero + " has escaped!!"};
 	    console.log(beOntheLookout||PanicAtTheJail);
  	},
     
-    "UseOfForce": function(){
+    "UseOfForce": function(armed){
 	if(true){
 	    var CurrentOrders = "Shoot to kill"}
 	else{ 
 	   var CurrentOrders = "Take him in alive"};
 	    return CurrentOrders;
+    },
+    "daysHuntingEscapee": function(daysrunning){
+	var DaysTracking = daysrunning + DaysSinceBreakOut;
+	return DaysTracking;
     }
+    
 };
     
 //main code
@@ -51,7 +57,8 @@ console.log(Police.mainTask);
 var UseOfForceOrder = Police.UseOfForce(armed);
 Police.APBs(7);
 console.log(UseOfForceOrder);
-Escapee.disappearingActs(true)
+Escapee.disappearingActs(true);
+console.log(Police.daysHuntingEscapee(5) + " days we've been tracking this guy")
 
 
 
