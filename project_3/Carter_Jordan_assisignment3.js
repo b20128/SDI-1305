@@ -7,10 +7,12 @@
 //variables
 var storyHero = "Jimi the giant"
 var lastSpottedIn = " a toyota camry"
-var armed = true
 var DaysSinceBreakOut = 2
 
-//created 1st object
+//JSON data
+
+
+//created 1st object, 3 properties: boolean, array, & string; and 1 mutator method   
 var Escapee = {
     "name": storyHero,
     "description": [     
@@ -18,18 +20,32 @@ var Escapee = {
 	" wearing an orange jumpsuit",
 	" Armed and Dangerous"
 	],
+    "armed":true,
     "disappearingActs": function(){
 	var EscapeList =["change clothes", "get money", "getout of dodge!"]
 	for(i=0;i<EscapeList.length;i=i+1) {
-	   console.log("i need to " + EscapeList[i]) 
+	   var whatIneed = ("i need to " + EscapeList[i])
+	   return whatIneed
 	}
 	
     }
 };
-//2nd object, 2 properties, number and string 2     
+//2nd object, 3 properties, object, number, and string. 3 methods: accessor, procedure, function    
 var Police={
     "mainTask": ("bring in " + storyHero),
-    "OfficersOnDuty": 125,
+    "OfficersActive": 125,
+    
+    "officerRoboCop":{ 
+	"name": "Raimes",
+	"weapons": "automatic pistol",
+	"number": 7
+    },
+    
+    "WhosOnDuty": function(){
+	if ("onDuty" == true) {
+	    Console.log(this.name + "is on")
+	}else{console.log(this.name + " is off")}
+    },
     "APBs": function (daysSinceEscape){
 	
 	if (daysSinceEscape > 3){
@@ -54,11 +70,12 @@ var Police={
     
 //main code
 console.log(Police.mainTask);
-var UseOfForceOrder = Police.UseOfForce(armed);
+var UseOfForceOrder = Police.UseOfForce(Escapee.armed);
 Police.APBs(7);
 console.log(UseOfForceOrder);
 Escapee.disappearingActs(true);
-console.log(Police.daysHuntingEscapee(5) + " days we've been tracking this guy")
+console.log(Police.daysHuntingEscapee(5) + " days we've been tracking this guy, its time to send in Robocop")
+Police.WhosOnDuty(json);
 
 
 
