@@ -47,6 +47,8 @@ StringLib = {
         else{return false};
     },//problem 3 ends
     
+//Capitalize Each word in this sentence
+//Problem 4 begins
     "capEachWord":function(capThis){
         var words = capThis.split(" ");
         var arr = Array();
@@ -54,10 +56,13 @@ StringLib = {
         {
             lowCase = words[i].toLowerCase();
             lowCase = lowCase.charAt(0).toUpperCase() + lowCase.substring(1);
-        arr.push(lowCase);
-        }var corrected = arr.join(" ") 
+            arr.push(lowCase);
+        }
+        var corrected = arr.join(" ") 
         return corrected;
-    }
+    }//Problem 4 ends
+    
+//
 
     
 
