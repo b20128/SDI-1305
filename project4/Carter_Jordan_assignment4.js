@@ -26,10 +26,10 @@ StringLib = {
 
 //Is this String an email adress?
 //problem 2 begins
-    "EmailCheck": function(emailAdress){
-        var dot = emailAdress.lastindexOf(".");
+    "EmailCheck":function(emailAdress){
+        var Dotcom = emailAdress.substring(emailAdress.length,emailAdress.length-3)
         var atSign = emailAdress.indexOf("@") 
-        if (emailAdress.carAt(dot,length) === ".com"||".edu"||".gov"){
+        if (Dotcom == ".com"||".edu"||".gov"){
             if (atSign > -1) {
             return true
             } else{return false}
