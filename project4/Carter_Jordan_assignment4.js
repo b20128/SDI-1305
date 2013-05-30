@@ -76,8 +76,19 @@ StringLib = {
 
 };
 
-
-
+//Array Library
+var ArrayLib= {
+    
+//problem 6 begins
+    "addNumbersInArray": function(array){
+        var result = 0;
+        isNumeric(array);
+        for (var i = 0; i < array.length; i++) {
+            result += array[i] 
+        }
+        return result
+    }//problem 6 ends 
+};
  
 
 
@@ -85,5 +96,6 @@ StringLib = {
 console.log(StringLib.PhoneNumCheck("610-262-5500"));
 console.log(StringLib.EmailCheck("zenmaster501@gmail.com"));
 console.log(StringLib.SiteCheck("https://www.fullsail.com"));
-console.log(StringLib.capEachWord("hey everyone howS EVErYONe dOING!!"))
-console.log(StringLib.changeSeperator("this is captain james, t kirk" , '/'))
+console.log(StringLib.capEachWord("hey everyone howS EVErYONe dOING!!"));
+console.log(StringLib.changeSeperator("this is captain james, t kirk" , '/'));
+console.log(ArrayLib.addNumbersInArray([1,3,"pickel",23,"red",true]));
