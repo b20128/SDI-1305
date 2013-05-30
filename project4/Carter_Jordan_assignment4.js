@@ -65,11 +65,10 @@ StringLib = {
 //change your separator for , to /
 //Problem 5 begins
     "changeSeperator": function(string, replacer){
-        string.replace("," , replacer)
-        var words = string.split(",") 
+        var words = string.split(" ") 
         var array = Array();
         array.push(words);
-        var fixed = array.join("/");
+        var fixed = array.join(" / ");
         return fixed;
         }
             
@@ -82,7 +81,7 @@ var ArrayLib= {
 //problem 6 begins
     "addNumbersInArray": function(array){
         var result = 0;
-        isNumeric(array);
+        array.filter(isNaN);
         for (var i = 0; i < array.length; i++) {
             result += array[i] 
         }
