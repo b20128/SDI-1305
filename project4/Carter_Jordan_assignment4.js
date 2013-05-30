@@ -60,12 +60,18 @@ StringLib = {
         }
         var corrected = arr.join(" ") 
         return corrected;
-    }//Problem 4 ends
-    
-//
+    },//Problem 4 ends
 
-    
-
+//change your separator for , to /
+//Problem 5 begins
+    "changeSeperator": function(string, separator, replacer){
+        var words = string.split(" ");
+        var a = new Array();
+        a.push(words)
+        var replaced = a.join("/") 
+        return replaced;
+        }
+            
 
 };
 
@@ -74,4 +80,5 @@ StringLib = {
 console.log(StringLib.PhoneNumCheck("610-262-5500"));
 console.log(StringLib.EmailCheck("zenmaster501@gmail.com"));
 console.log(StringLib.SiteCheck("https://www.fullsail.com"));
-console.log(StringLib.capEachWord("hey everyone!"))
+console.log(StringLib.capEachWord("hey everyone howS EVErYONe dOING!!"))
+console.log(StringLib.changeSeperator("this is captain james, t, kirk", ','))
