@@ -68,22 +68,23 @@ StringLib = {
         var words = string.split(" ") 
         var array = Array();
         array.push(words);
-        var fixed = array.join(" / ");
+        var fixed = array.join(",");
         return fixed;
-        }
+        }//problem5 ends
             
 
-};
+};//end of string library
 
 //Array Library
 var ArrayLib= {
     
 //problem 6 begins
-    "addNumbersInArray": function(array){
+    "addNumbersInArray": function(input){
         var result = 0;
-        array.filter(isNaN);
-        for (var i = 0; i < array.length; i++) {
-            result += array[i] 
+        
+        for (var i = 0; i < input.length; i++){
+            input.filter(!isNaN[input])
+            result += input[i] 
         }
         return result
     }//problem 6 ends 
@@ -96,5 +97,5 @@ console.log(StringLib.PhoneNumCheck("610-262-5500"));
 console.log(StringLib.EmailCheck("zenmaster501@gmail.com"));
 console.log(StringLib.SiteCheck("https://www.fullsail.com"));
 console.log(StringLib.capEachWord("hey everyone howS EVErYONe dOING!!"));
-console.log(StringLib.changeSeperator("this is captain james, t kirk" , '/'));
-console.log(ArrayLib.addNumbersInArray([1,3,"pickel",23,"red",true]));
+console.log(StringLib.changeSeperator("this is captain james t kirk" , '/'));
+console.log(ArrayLib.addNumbersInArray([1,3,"pickel",23,"red"]));
