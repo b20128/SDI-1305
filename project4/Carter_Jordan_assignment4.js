@@ -64,7 +64,7 @@ StringLib = {
 
 //change your separator for , to /
 //Problem 5 begins
-    "changeSeperator": function(string, replacer){
+    "changeSeperator": function(string, sapacer, replacer){
         var words = string.split(" ") 
         var array = Array();
         array.push(words);
@@ -81,11 +81,11 @@ var ArrayLib= {
 //problem 6 begins
     "addNumbersInArray": function(input){
         var result = 0;
-        
         for (var i = 0; i < input.length; i++){
-            input.filter(!isNaN[input])
-            result += input[i] 
-        }
+            var numbers = input.filter(!isNaN[ input])
+            result += numbers[i];
+             
+        }                  
         return result
     }//problem 6 ends 
 };
@@ -97,5 +97,5 @@ console.log(StringLib.PhoneNumCheck("610-262-5500"));
 console.log(StringLib.EmailCheck("zenmaster501@gmail.com"));
 console.log(StringLib.SiteCheck("https://www.fullsail.com"));
 console.log(StringLib.capEachWord("hey everyone howS EVErYONe dOING!!"));
-console.log(StringLib.changeSeperator("this is captain james t kirk" , '/'));
+console.log(StringLib.changeSeperator("this is captain james t kirk"," ", '/'));
 console.log(ArrayLib.addNumbersInArray([1,3,"pickel",23,"red"]));
